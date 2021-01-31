@@ -87,6 +87,7 @@ var (
 	ErrorNotImplemented405     = errors.New("Not implemented, requires 0MQ version 4.0.5")
 	ErrorNotImplemented41      = errors.New("Not implemented, requires 0MQ version 4.1")
 	ErrorNotImplemented42      = errors.New("Not implemented, requires 0MQ version 4.2")
+	ErrorNotImplemented43      = errors.New("Not implemented, requires 0MQ version 4.3")
 	ErrorNotImplemented42draft = errors.New("Not implemented, requires 0MQ version 4.2 with drafts enabled")
 	ErrorNotImplementedWindows = errors.New("Not implemented on Windows")
 	ErrorNoSocket              = errors.New("No such socket")

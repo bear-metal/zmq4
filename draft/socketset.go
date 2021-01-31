@@ -778,6 +778,18 @@ func (soc *Socket) SetMulticastMaxtpdu(value int) error {
 	return soc.setInt(C.ZMQ_MULTICAST_MAXTPDU, value)
 }
 
+// ZMQ_ROUTER_NOTIFY: Retrieve router socket notification settings
+//
+// Returns ErrorNotImplemented43 with ZeroMQ version < 4.3
+//
+// See: http://api.zeromq.org/4-3:zmq-setsockopt#toc81
+func (soc *Socket) SetRouterNotify(value int) error {
+	if minor < 3 {
+		return ErrorNotImplemented43
+	}
+	return soc.setInt(C.ZMQ_ROUTER_NOTIFY, value)
+}
+
 // ZMQ_VMCI_BUFFER_SIZE: Set buffer size of the VMCI socket
 //
 // Returns ErrorNotImplemented42 with ZeroMQ version < 4.2
